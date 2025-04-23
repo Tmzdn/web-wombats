@@ -15,7 +15,9 @@ export default function NotFound() {
           <Link href="/">Back to Home</Link>
         </Button>
         <Button asChild variant="outline">
-          <Link href="/contact">Contact Support</Link>
+          <a href="https://www.linkedin.com/company/web-wombats/" target="_blank" rel="noopener noreferrer">
+            Contact Support
+          </a>
         </Button>
       </div>
     </div>
