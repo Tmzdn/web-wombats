@@ -86,6 +86,97 @@ const translations = {
     "footer.copyright": "© 2023 Web Wombats. All rights reserved.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
+
+    // Privacy Policy Translations
+    "privacy.title": "Privacy Policy",
+    "privacy.back": "Back to Home",
+
+    "privacy.section1.title": "1. Introduction",
+    "privacy.section1.content":
+      "We, Web Wombats GmbH, take the protection of your personal data very seriously. This privacy policy informs you about how we collect, use, and protect personal data when you visit our website.",
+
+    "privacy.section2.title": "2. Responsible Entity",
+    "privacy.section2.content":
+      "The entity responsible for data processing is Web Wombats GmbH. For privacy inquiries, please contact us through our LinkedIn profile:",
+    "privacy.section2.link": "linkedin.com/company/web-wombats",
+
+    "privacy.section3.title": "3. Collection and Processing of Personal Data",
+    "privacy.section3.content":
+      "We collect and process personal data only when legally permitted or when you consent to data collection. Personal data refers to all information relating to an identified or identifiable natural person.",
+
+    "privacy.section4.title": "4. Purpose of Data Processing",
+    "privacy.section4.content": "The processing of your personal data is carried out for the following purposes:",
+    "privacy.section4.list.1": "Provision and optimization of our website",
+    "privacy.section4.list.2": "Analysis of user behavior to improve our services",
+    "privacy.section4.list.3": "Marketing and advertising purposes",
+    "privacy.section4.list.4": "Fulfillment of legal obligations",
+
+    "privacy.section5.title": "5. Legal Basis for Processing",
+    "privacy.section5.content":
+      "The processing of your data is based on your consent (Art. 6 Para. 1 lit. a GDPR), for the fulfillment of a contract or pre-contractual measures (Art. 6 Para. 1 lit. b GDPR), due to legal obligations (Art. 6 Para. 1 lit. c GDPR), or to protect the legitimate interests of our company (Art. 6 Para. 1 lit. f GDPR).",
+
+    "privacy.section6.title": "6. Use of Cookies and Tracking Technologies",
+    "privacy.section6.content":
+      "We use cookies and similar technologies to analyze the use of our website and improve our services. We employ the following services:",
+    "privacy.section6.list.1": "Google Analytics 4: To analyze user behavior on our website.",
+    "privacy.section6.list.2": "Meta Pixel: To measure the effectiveness of our Facebook advertising.",
+    "privacy.section6.list.3": "Google Ads: To place and analyze online advertising.",
+    "privacy.section6.note":
+      "These services may transfer personal data to the USA. We would like to point out that there is no level of data protection in the USA equivalent to EU data protection law. The transfer takes place on the basis of your express consent in accordance with Art. 49 Para. 1 lit. a GDPR.",
+
+    "privacy.section7.title": "7. Data Sharing with Third Parties",
+    "privacy.section7.content":
+      "Your personal data will only be shared with third parties if this is necessary for contract fulfillment, if we are legally obligated to do so, or if you have consented.",
+
+    "privacy.section8.title": "8. Storage Duration",
+    "privacy.section8.content":
+      "We store your personal data only as long as necessary for achieving the stated purposes or as required by legal retention periods.",
+
+    "privacy.section9.title": "9. Your Rights",
+    "privacy.section9.content": "You have the right to:",
+    "privacy.section9.list.1": "Obtain information about your data stored with us",
+    "privacy.section9.list.2": "Request correction of incorrect data",
+    "privacy.section9.list.3": "Request deletion of your data, provided no legal retention obligations exist",
+    "privacy.section9.list.4": "Request restriction of processing",
+    "privacy.section9.list.5": "Object to processing",
+    "privacy.section9.list.6": "Request data portability",
+    "privacy.section9.list.7": "Revoke your consent at any time with effect for the future",
+    "privacy.section9.contact": "To exercise your rights, please contact us through our LinkedIn profile:",
+    "privacy.section9.link": "linkedin.com/company/web-wombats",
+
+    "privacy.section10.title": "10. Changes to this Privacy Policy",
+    "privacy.section10.content":
+      "We reserve the right to adapt this privacy policy to ensure it always complies with current legal requirements or to implement changes to our services in the privacy policy. The new privacy policy will then apply to your subsequent visits.",
+
+    // Terms of Service Translations
+    "terms.title": "Terms of Service",
+    "terms.back": "Back to Home",
+    "terms.date": "Last updated: April 23, 2025",
+
+    "terms.section1.title": "1. Scope",
+    "terms.section1.content":
+      "These Terms of Service apply to all services provided by Web Wombats GmbH in the areas of Digital Analytics Consulting, IT consulting, software development, and related technologies.",
+
+    "terms.section2.title": "2. Services",
+    "terms.section2.content":
+      "Web Wombats offers consulting services in the areas of Google Analytics 4, Google Tag Manager, conversion tracking, IT strategy, software development, and related topics. The specific services are individually agreed upon with the client.",
+
+    "terms.section3.title": "3. Contract Formation",
+    "terms.section3.content":
+      "A contract is formed when the client accepts an offer from Web Wombats or when a written confirmation is provided.",
+
+    "terms.section4.title": "4. Liability",
+    "terms.section4.content":
+      "Web Wombats is only liable for damages caused by intentional or grossly negligent behavior. Liability for indirect damages or consequential damages is excluded.",
+
+    "terms.section5.title": "5. Data Protection",
+    "terms.section5.content":
+      "The processing of personal data is carried out in accordance with Web Wombats' Privacy Policy. This can be viewed under Privacy Policy.",
+    "terms.section5.link": "Privacy Policy",
+
+    "terms.section6.title": "6. Final Provisions",
+    "terms.section6.content":
+      "The laws of Switzerland apply. The place of jurisdiction is the registered office of Web Wombats GmbH.",
   },
   de: {
     "home.hero.title": "Klare, Einfache, Unkomplizierte Digitale Analyse",
@@ -160,8 +251,99 @@ const translations = {
     "footer.tagline": "Klare, einfache, unkomplizierte Beratung zu digitalen Analysen.",
     "footer.worldwide": "Weltweit tätig.",
     "footer.copyright": "© 2023 Web Wombats. Alle Rechte vorbehalten.",
-    "footer.privacy": "Datenschutzrichtlinie",
+    "footer.privacy": "Datenschutzerklärung",
     "footer.terms": "Nutzungsbedingungen",
+
+    // Privacy Policy Translations (German original)
+    "privacy.title": "Datenschutzerklärung",
+    "privacy.back": "Zurück zur Startseite",
+
+    "privacy.section1.title": "1. Einleitung",
+    "privacy.section1.content":
+      "Wir, die Web Wombats GmbH, nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Diese Datenschutzerklärung informiert Sie darüber, wie wir personenbezogene Daten erheben, verwenden und schützen, wenn Sie unsere Website besuchen.",
+
+    "privacy.section2.title": "2. Verantwortliche Stelle",
+    "privacy.section2.content":
+      "Verantwortlich für die Datenverarbeitung ist die Web Wombats GmbH. Für Datenschutzanfragen kontaktieren Sie uns bitte über unser LinkedIn-Profil:",
+    "privacy.section2.link": "linkedin.com/company/web-wombats",
+
+    "privacy.section3.title": "3. Erhebung und Verarbeitung personenbezogener Daten",
+    "privacy.section3.content":
+      "Wir erheben und verarbeiten personenbezogene Daten nur, wenn dies gesetzlich erlaubt ist oder Sie in die Datenerhebung einwilligen. Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.",
+
+    "privacy.section4.title": "4. Zweck der Datenverarbeitung",
+    "privacy.section4.content": "Die Verarbeitung Ihrer personenbezogenen Daten erfolgt zu folgenden Zwecken:",
+    "privacy.section4.list.1": "Bereitstellung und Optimierung unserer Website",
+    "privacy.section4.list.2": "Analyse des Nutzerverhaltens zur Verbesserung unseres Angebots",
+    "privacy.section4.list.3": "Marketing- und Werbezwecke",
+    "privacy.section4.list.4": "Erfüllung gesetzlicher Verpflichtungen",
+
+    "privacy.section5.title": "5. Rechtsgrundlage der Verarbeitung",
+    "privacy.section5.content":
+      "Die Verarbeitung Ihrer Daten erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO), aufgrund rechtlicher Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO) oder zur Wahrung berechtigter Interessen unseres Unternehmens (Art. 6 Abs. 1 lit. f DSGVO).",
+
+    "privacy.section6.title": "6. Verwendung von Cookies und Tracking-Technologien",
+    "privacy.section6.content":
+      "Wir verwenden Cookies und ähnliche Technologien, um die Nutzung unserer Website zu analysieren und unser Angebot zu verbessern. Dabei setzen wir folgende Dienste ein:",
+    "privacy.section6.list.1": "Google Analytics 4: Zur Analyse des Nutzerverhaltens auf unserer Website.",
+    "privacy.section6.list.2": "Meta Pixel: Zur Messung der Effektivität unserer Facebook-Werbung.",
+    "privacy.section6.list.3": "Google Ads: Zur Schaltung und Analyse von Online-Werbung.",
+    "privacy.section6.note":
+      "Diese Dienste können personenbezogene Daten in die USA übertragen. Wir weisen darauf hin, dass in den USA kein dem EU-Datenschutzrecht gleichwertiges Datenschutzniveau besteht. Die Übermittlung erfolgt auf Grundlage Ihrer ausdrücklichen Einwilligung gemäß Art. 49 Abs. 1 lit. a DSGVO.",
+
+    "privacy.section7.title": "7. Datenweitergabe an Dritte",
+    "privacy.section7.content":
+      "Eine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt nur, wenn dies zur Vertragserfüllung notwendig ist, wir gesetzlich dazu verpflichtet sind oder Sie eingewilligt haben.",
+
+    "privacy.section8.title": "8. Speicherdauer",
+    "privacy.section8.content":
+      "Wir speichern Ihre personenbezogenen Daten nur so lange, wie es für die Erreichung der genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.",
+
+    "privacy.section9.title": "9. Ihre Rechte",
+    "privacy.section9.content": "Sie haben das Recht:",
+    "privacy.section9.list.1": "Auskunft über Ihre bei uns gespeicherten Daten zu erhalten",
+    "privacy.section9.list.2": "Berichtigung unrichtiger Daten zu verlangen",
+    "privacy.section9.list.3":
+      "Löschung Ihrer Daten zu verlangen, sofern keine gesetzlichen Aufbewahrungspflichten bestehen",
+    "privacy.section9.list.4": "Einschränkung der Verarbeitung zu verlangen",
+    "privacy.section9.list.5": "Widerspruch gegen die Verarbeitung einzulegen",
+    "privacy.section9.list.6": "Datenübertragbarkeit zu verlangen",
+    "privacy.section9.list.7": "Ihre Einwilligung jederzeit mit Wirkung für die Zukunft zu widerrufen",
+    "privacy.section9.contact": "Zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte über unser LinkedIn-Profil:",
+    "privacy.section9.link": "linkedin.com/company/web-wombats",
+
+    "privacy.section10.title": "10. Änderungen dieser Datenschutzerklärung",
+    "privacy.section10.content":
+      "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.",
+
+    // Terms of Service Translations (German original)
+    "terms.title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "terms.back": "Zurück zur Startseite",
+    "terms.date": "Stand: 23. April 2025",
+
+    "terms.section1.title": "1. Geltungsbereich",
+    "terms.section1.content":
+      "Diese AGB gelten für alle Dienstleistungen, die von der Web Wombats GmbH im Bereich Digital Analytics Consulting, IT-Beratung, Softwareentwicklung und verwandten Technologien erbracht werden.",
+
+    "terms.section2.title": "2. Leistungen",
+    "terms.section2.content":
+      "Web Wombats bietet Beratungsdienstleistungen in den Bereichen Google Analytics 4, Google Tag Manager, Conversion-Tracking, IT-Strategie, Softwareentwicklung und verwandten Themen an. Die konkreten Leistungen werden individuell mit dem Kunden vereinbart.",
+
+    "terms.section3.title": "3. Vertragsabschluss",
+    "terms.section3.content":
+      "Ein Vertrag kommt zustande, wenn der Kunde ein Angebot von Web Wombats annimmt oder eine schriftliche Bestätigung erfolgt.",
+
+    "terms.section4.title": "4. Haftung",
+    "terms.section4.content":
+      "Web Wombats haftet nur für Schäden, die durch vorsätzliches oder grob fahrlässiges Verhalten verursacht wurden. Eine Haftung für indirekte Schäden oder Folgeschäden ist ausgeschlossen.",
+
+    "terms.section5.title": "5. Datenschutz",
+    "terms.section5.content":
+      "Die Verarbeitung personenbezogener Daten erfolgt gemäß der Datenschutzerklärung von Web Wombats. Diese ist unter Datenschutzerklärung einsehbar.",
+    "terms.section5.link": "Datenschutzerklärung",
+
+    "terms.section6.title": "6. Schlussbestimmungen",
+    "terms.section6.content": "Es gilt das Recht der Schweiz. Gerichtsstand ist der Sitz der Web Wombats GmbH.",
   },
 }
 

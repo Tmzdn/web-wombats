@@ -9,10 +9,11 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { LanguageSelector } from "@/components/language-selector"
 import { cn } from "@/lib/utils"
 
+// Updated order to match the page content flow: Home -> Services -> About -> Contact
 const navItems = [
   { name: "Home", path: "#home" },
-  { name: "About", path: "#about" },
   { name: "Services", path: "#services" },
+  { name: "About", path: "#about" },
   { name: "Contact", path: "#contact" },
 ]
 
@@ -25,22 +26,41 @@ export function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10)
 
-      // Determine active section based on scroll position
-      const sections = navItems.map((item) => item.path.substring(1))
+      // Get all section elements with their positions
+      const sectionPositions = navItems.map((item) => {
+        const id = item.path.substring(1)
+        const element = document.getElementById(id)
+        if (!element) return { id, top: 0, visible: false }
 
-      for (const section of sections.reverse()) {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          if (rect.top <= 100) {
-            setActiveSection(section)
-            break
-          }
+        const rect = element.getBoundingClientRect()
+        const top = rect.top + window.scrollY
+        // A section is considered visible if it's within 200px of the top of the viewport
+        const visible = rect.top < 200 && rect.bottom > 0
+
+        return { id, top, visible }
+      })
+
+      // Find the first visible section
+      const visibleSections = sectionPositions.filter((section) => section.visible)
+
+      if (visibleSections.length > 0) {
+        // If there are visible sections, set the first one as active
+        setActiveSection(visibleSections[0].id)
+      } else {
+        // If no sections are visible (rare case), find the closest one above the viewport
+        const sectionsAbove = sectionPositions.filter((section) => section.top <= window.scrollY + 200)
+        if (sectionsAbove.length > 0) {
+          // Get the last section above the viewport
+          const closestSection = sectionsAbove[sectionsAbove.length - 1]
+          setActiveSection(closestSection.id)
         }
       }
     }
 
     window.addEventListener("scroll", handleScroll)
+    // Initial check
+    setTimeout(handleScroll, 100) // Slight delay to ensure DOM is fully loaded
+
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -54,20 +74,22 @@ export function Navbar() {
         behavior: "smooth",
       })
       setIsOpen(false)
+      // Set active section immediately on click
+      setActiveSection(targetId)
     }
   }
 
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-200",
+        "sticky top-0 z-50 w-full transition-all duration-500",
         scrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-transparent",
       )}
     >
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <a href="#home" className="flex items-center gap-2" onClick={(e) => handleNavClick(e, "#home")}>
-            <span className="text-xl font-bold gradient-text">Web Wombats</span>
+            <span className="text-xl font-bold gradient-text animate-gradient-shift">Web Wombats</span>
           </a>
         </div>
 
@@ -85,7 +107,7 @@ export function Navbar() {
             >
               {item.name}
               {activeSection === item.path.substring(1) && (
-                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full" />
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full animate-fade-in" />
               )}
             </a>
           ))}
@@ -98,14 +120,14 @@ export function Navbar() {
           <LanguageSelector />
           <ThemeToggle />
           <Button variant="ghost" size="icon" aria-label="Toggle Menu" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isOpen ? <X className="h-6 w-6 animate-scale" /> : <Menu className="h-6 w-6 animate-scale" />}
           </Button>
         </div>
       </div>
 
       {/* Mobile navigation menu */}
       {isOpen && (
-        <div className="md:hidden animate-in" style={{ animationDelay: "50ms" }}>
+        <div className="md:hidden animate-slide-down" style={{ animationDelay: "50ms" }}>
           <div className="container py-4 flex flex-col space-y-4">
             {navItems.map((item, index) => (
               <a
@@ -113,7 +135,7 @@ export function Navbar() {
                 href={item.path}
                 onClick={(e) => handleNavClick(e, item.path)}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary py-2 animate-in",
+                  "text-sm font-medium transition-colors hover:text-primary py-2 animate-slide-right",
                   activeSection === item.path.substring(1) ? "text-primary" : "text-muted-foreground",
                 )}
                 style={{ animationDelay: `${(index + 1) * 50}ms` }}

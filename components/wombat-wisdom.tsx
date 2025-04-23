@@ -34,10 +34,10 @@ export function WombatWisdom() {
   }, [])
 
   return (
-    <Card className="bg-accent/50 border-accent hover:shadow-md transition-all">
+    <Card className="bg-accent/50 border-accent hover-glow transition-all animate-fade-in">
       <CardContent className="pt-6 pb-4 px-6">
         <div className="flex gap-4 items-start">
-          <Quote className="h-6 w-6 text-primary shrink-0 mt-0.5" />
+          <Quote className="h-6 w-6 text-primary shrink-0 mt-0.5 animate-bounce-subtle" />
           <div className={`transition-opacity duration-500 ${isAnimating ? "opacity-0" : "opacity-100"}`}>
             <p className="text-sm italic">{quote}</p>
             <p className="text-xs text-muted-foreground mt-2">Wombat Wisdom</p>

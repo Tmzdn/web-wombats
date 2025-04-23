@@ -40,16 +40,13 @@ export function CTASection({
   }
 
   return (
-    <section className={`bg-accent py-16 ${className}`}>
+    <section className={`bg-animate py-16 ${className}`}>
       <div className="container text-center">
-        <h2 className="text-3xl font-bold mb-4 animate-in">{t(titleKey)}</h2>
-        <p
-          className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 animate-in"
-          style={{ animationDelay: "100ms" }}
-        >
+        <h2 className="text-3xl font-bold mb-4 reveal">{t(titleKey)}</h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 reveal" style={{ transitionDelay: "100ms" }}>
           {t(descriptionKey)}
         </p>
-        <Button asChild size="lg" className="group animate-in" style={{ animationDelay: "200ms" }}>
+        <Button asChild size="lg" className="group hover-scale reveal" style={{ transitionDelay: "200ms" }}>
           <a
             href={buttonLink}
             onClick={(e) => !isExternal && handleNavClick(e, buttonLink)}
