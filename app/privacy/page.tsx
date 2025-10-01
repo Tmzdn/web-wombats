@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useLanguage } from "@/context/language-context"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft } from "lucide-react"
@@ -18,10 +20,19 @@ export default function PrivacyPolicy() {
     window.scrollTo(0, 0)
   }, [])
 
+  // Function to handle the privacy settings click
+  const handlePrivacySettingsClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    // Check if UC_UI exists in the window object
+    if (typeof window !== "undefined" && (window as any).UC_UI) {
+      ;(window as any).UC_UI.showSecondLayer()
+    }
+  }
+
   return (
     <div className="container py-8 max-w-4xl mx-auto animate-fade-in">
       <div className="pt-20">
-        <Button asChild variant="ghost" className="mb-6 group hover-scale">
+        <Button asChild variant="ghost" className="mb-6 group hover-scale" data-analytics-event="click_button">
           <Link href="/" className="flex items-center gap-2">
             <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
             {t("privacy.back")}
@@ -33,6 +44,18 @@ export default function PrivacyPolicy() {
         </h1>
 
         <div className="space-y-8 pb-8">
+          {/* Privacy Settings Link */}
+          <div className="mb-8">
+            <a
+              href="#"
+              onClick={handlePrivacySettingsClick}
+              className="text-primary hover:underline inline-flex items-center"
+              data-analytics-event="click_privacy_settings"
+            >
+              Privacy Settings
+            </a>
+          </div>
+
           {/* Section 1 */}
           <section className="reveal active">
             <h2 className="text-xl font-semibold mb-3">{t("privacy.section1.title")}</h2>
@@ -130,6 +153,18 @@ export default function PrivacyPolicy() {
             <h2 className="text-xl font-semibold mb-3">{t("privacy.section10.title")}</h2>
             <p className="text-muted-foreground">{t("privacy.section10.content")}</p>
           </section>
+
+          {/* Privacy Settings Link (repeated at bottom) */}
+          <div className="mt-8 pt-4 border-t">
+            <a
+              href="#"
+              onClick={handlePrivacySettingsClick}
+              className="text-primary hover:underline inline-flex items-center"
+              data-analytics-event="click_privacy_settings"
+            >
+              Privacy Settings
+            </a>
+          </div>
         </div>
       </div>
     </div>

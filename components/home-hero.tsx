@@ -44,7 +44,7 @@ export function HomeHero() {
             {t("home.hero.subtitle")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: "200ms" }}>
-            <Button asChild size="lg" className="group hover-scale">
+            <Button asChild size="lg" className="group hover-scale" data-analytics-event="click_button">
               <a
                 href="https://www.linkedin.com/company/web-wombats/"
                 target="_blank"
@@ -55,7 +55,13 @@ export function HomeHero() {
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="group hover-scale">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="group hover-scale"
+              data-analytics-event="click_button"
+            >
               <a href="#services" onClick={(e) => handleNavClick(e, "#services")} className="flex items-center gap-2">
                 {t("home.services.button")}
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

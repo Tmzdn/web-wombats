@@ -21,7 +21,7 @@ export default function TermsOfService() {
   return (
     <div className="container py-8 max-w-4xl mx-auto animate-fade-in">
       <div className="pt-20">
-        <Button asChild variant="ghost" className="mb-6 group hover-scale">
+        <Button asChild variant="ghost" className="mb-6 group hover-scale" data-analytics-event="click_button">
           <Link href="/" className="flex items-center gap-2">
             <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
             {t("terms.back")}

@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/context/language-context"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
@@ -10,10 +9,10 @@ import { Footer } from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Web Wombats | Digital Analytics Consulting",
+  title: "Web Wombats | AI-Powered Data Analytics & Warehousing",
   description:
-    "Clear, simple, straightforward digital analytics consulting specializing in GA4, GTM, and conversion tracking.",
-    generator: 'v0.dev'
+    "Transform your business with AI-powered analytics and intelligent automation. Expert data warehouse architecture and machine learning solutions.",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -22,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -45,15 +44,13 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <LanguageProvider>
-            <div className="flex min-h-screen flex-col">
-              <Navbar />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-          </LanguageProvider>
-        </ThemeProvider>
+        <LanguageProvider>
+          <div className="flex min-h-screen flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   )

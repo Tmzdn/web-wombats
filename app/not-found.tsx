@@ -11,10 +11,10 @@ export default function NotFound() {
         been moved.
       </p>
       <div className="flex flex-col sm:flex-row gap-4">
-        <Button asChild>
+        <Button asChild data-analytics-event="click_button">
           <Link href="/">Back to Home</Link>
         </Button>
-        <Button asChild variant="outline">
+        <Button asChild variant="outline" data-analytics-event="click_button">
           <a href="https://www.linkedin.com/company/web-wombats/" target="_blank" rel="noopener noreferrer">
             Contact Support
           </a>

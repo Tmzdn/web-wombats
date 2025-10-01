@@ -46,7 +46,13 @@ export function CTASection({
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 reveal" style={{ transitionDelay: "100ms" }}>
           {t(descriptionKey)}
         </p>
-        <Button asChild size="lg" className="group hover-scale reveal" style={{ transitionDelay: "200ms" }}>
+        <Button
+          asChild
+          size="lg"
+          className="group hover-scale reveal"
+          style={{ transitionDelay: "200ms" }}
+          data-analytics-event="click_button"
+        >
           <a
             href={buttonLink}
             onClick={(e) => !isExternal && handleNavClick(e, buttonLink)}

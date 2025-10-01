@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { LucideIcon } from "lucide-react"
 
 interface ServiceCardProps {
@@ -11,17 +11,17 @@ interface ServiceCardProps {
 export function ServiceCard({ title, description, icon: Icon, delay = 0 }: ServiceCardProps) {
   return (
     <Card
-      className="h-full transition-all hover-lift hover-glow reveal card-hover group"
+      className="h-full transition-all hover-lift reveal group relative overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm"
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <CardHeader>
-        <div className="bg-primary/10 w-12 h-12 rounded-md flex items-center justify-center mb-4 transition-all duration-500 icon-container group-hover:bg-primary/20">
-          <Icon className="h-6 w-6 text-primary transition-all duration-500 group-hover:text-primary/90" />
+      <CardHeader className="relative z-10 space-y-4">
+        <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-500">
+          <Icon className="h-7 w-7 text-primary" />
         </div>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-2xl font-bold">{title}</CardTitle>
       </CardHeader>
-      <CardContent>
-        <CardDescription className="text-foreground/80">{description}</CardDescription>
+      <CardContent className="relative z-10">
+        <p className="text-muted-foreground leading-relaxed text-base">{description}</p>
       </CardContent>
     </Card>
   )

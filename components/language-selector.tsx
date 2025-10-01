@@ -22,7 +22,12 @@ export function LanguageSelector() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="flex items-center gap-1 h-8 px-2">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="flex items-center gap-1 h-8 px-2"
+          data-analytics-event="click_button"
+        >
           <span className="text-base mr-1">{language === "en" ? "🇬🇧" : "🇩🇪"}</span>
           <span className="text-sm hidden md:inline">{language.toUpperCase()}</span>
           <ChevronDown className="h-4 w-4 opacity-50" />
